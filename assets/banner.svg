@@ -84,7 +84,7 @@
   <!-- marquee -->
   <rect y="288" width="900" height="32" fill="#000" opacity="0.6"/>
   <text y="308" font-family="Courier New, monospace" font-size="11" fill="#9aa0a6" textLength="2400" lengthAdjust="spacing">
-    ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧
+    ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧   ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧   ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧   ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧   ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧   ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧   ✧
     <animateTransform attributeName="transform" type="translate" values="0 0;-400 0" dur="10s" repeatCount="indefinite"/>
   </text>
 </svg>
