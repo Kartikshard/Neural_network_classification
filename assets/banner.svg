@@ -62,7 +62,7 @@
 
   <!-- text -->
   <text x="450" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="14" letter-spacing="6" fill="url(#holo)">
-    [ 2000 // CHROME EDITION // v1.0 ]
+    
     <animate attributeName="opacity" values="1;0.55;1;0.9;1" dur="2.2s" repeatCount="indefinite"/>
   </text>
   <text x="450" y="165" text-anchor="middle" font-family="'UnifrakturCook','Old English Text MT','Blackadder ITC',Georgia,serif" font-size="80" font-weight="bold" fill="url(#chrome)">Neural Network</text>
