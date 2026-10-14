@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320" role="img" aria-label="Neural Network Classification">
+  <defs>
+    <linearGradient id="chrome" x1="-1" y1="0" x2="0" y2="0.3" spreadMethod="reflect">
+      <stop offset="0" stop-color="#4b4b4f"/>
+      <stop offset="0.25" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#8f9399"/>
+      <stop offset="0.75" stop-color="#f4f4f6"/>
+      <stop offset="1" stop-color="#55555a"/>
+      <animate attributeName="x1" values="-1;1" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="holo" x1="-1" y1="0" x2="0" y2="0" spreadMethod="reflect">
+      <stop offset="0" stop-color="#ff6ec7"/>
+      <stop offset="0.5" stop-color="#6ef3ff"/>
+      <stop offset="1" stop-color="#b69cff"/>
+      <animate attributeName="x1" values="-1;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.9"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="40"/></filter>
+    <pattern id="grid" width="45" height="30" patternUnits="userSpaceOnUse">
+      <path d="M45 0H0V30" fill="none" stroke="#fff" stroke-opacity="0.09"/>
+      <animateTransform attributeName="patternTransform" type="translate" values="0 0;0 30" dur="2s" repeatCount="indefinite"/>
+    </pattern>
+    <path id="spark" d="M0 -12 Q1.5 -1.5 12 0 Q1.5 1.5 0 12 Q-1.5 1.5 -12 0 Q-1.5 -1.5 0 -12Z"/>
+    <g id="cross">
+      <rect x="-6" y="-60" width="12" height="120" rx="2"/>
+      <rect x="-34" y="-28" width="68" height="12" rx="2"/>
+      <circle cx="0" cy="-62" r="8"/><circle cx="0" cy="62" r="8"/>
+      <circle cx="-36" cy="-22" r="8"/><circle cx="36" cy="-22" r="8"/>
+    </g>
+  </defs>
+
+  <rect width="900" height="320" fill="#050505"/>
+  <circle cx="200" cy="120" r="110" fill="#ff6ec7" opacity="0.35" filter="url(#blur)">
+    <animate attributeName="cx" values="200;700;200" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="220" r="110" fill="#6ef3ff" opacity="0.3" filter="url(#blur)">
+    <animate attributeName="cx" values="700;200;700" dur="11s" repeatCount="indefinite"/>
+  </circle>
+  <rect width="900" height="320" fill="url(#grid)"/>
+  <rect width="900" height="320" fill="url(#vig)"/>
+
+  <rect width="900" height="2" fill="url(#holo)" opacity="0.6">
+    <animate attributeName="y" values="0;320" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- crosses -->
+  <g transform="translate(85,160)"><g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="3s" repeatCount="indefinite"/>
+    <g><animateTransform attributeName="transform" type="scale" values="1 1;0.05 1;1 1" dur="3.4s" repeatCount="indefinite"/>
+      <use href="#cross" fill="url(#chrome)"/></g>
+  </g></g>
+  <g transform="translate(815,160)"><g>
+    <animateTransform attributeName="transform" type="translate" values="0 -8;0 0;0 -8" dur="3s" repeatCount="indefinite"/>
+    <g><animateTransform attributeName="transform" type="scale" values="1 1;0.05 1;1 1" dur="3.4s" begin="1.7s" repeatCount="indefinite"/>
+      <use href="#cross" fill="url(#chrome)"/></g>
+  </g></g>
+
+  <!-- text -->
+  <text x="450" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="14" letter-spacing="6" fill="url(#holo)">
+    [ 2000 // CHROME EDITION // v1.0 ]
+    <animate attributeName="opacity" values="1;0.55;1;0.9;1" dur="2.2s" repeatCount="indefinite"/>
+  </text>
+  <text x="450" y="165" text-anchor="middle" font-family="'UnifrakturCook','Old English Text MT','Blackadder ITC',Georgia,serif" font-size="80" font-weight="bold" fill="url(#chrome)">Neural Network</text>
+  <text x="450" y="228" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-size="30" letter-spacing="14" fill="url(#chrome)">CLASSIFICATION</text>
+  <text x="450" y="262" text-anchor="middle" font-family="Courier New, monospace" font-size="13" letter-spacing="3" fill="#9aa0a6">input → hidden → hidden → softmax</text>
+
+  <!-- sparkles -->
+  <g fill="#fff">
+    <g transform="translate(160,60)"><use href="#spark"><animateTransform attributeName="transform" type="scale" values="0;1.2;0" dur="2.4s" repeatCount="indefinite"/></use></g>
+    <g transform="translate(740,50)"><use href="#spark" fill="#6ef3ff"><animateTransform attributeName="transform" type="scale" values="0;1;0" dur="2s" begin="0.6s" repeatCount="indefinite"/></use></g>
+    <g transform="translate(250,250)"><use href="#spark" fill="#ff6ec7"><animateTransform attributeName="transform" type="scale" values="0;1.4;0" dur="2.8s" begin="1s" repeatCount="indefinite"/></use></g>
+    <g transform="translate(660,255)"><use href="#spark"><animateTransform attributeName="transform" type="scale" values="0;1;0" dur="2.2s" begin="0.3s" repeatCount="indefinite"/></use></g>
+    <g transform="translate(830,90)"><use href="#spark" fill="#b69cff"><animateTransform attributeName="transform" type="scale" values="0;0.9;0" dur="1.8s" begin="1.2s" repeatCount="indefinite"/></use></g>
+    <g transform="translate(70,270)"><use href="#spark" fill="#6ef3ff"><animateTransform attributeName="transform" type="scale" values="0;1;0" dur="2.6s" begin="0.9s" repeatCount="indefinite"/></use></g>
+    <g transform="translate(450,35)"><use href="#spark"><animateTransform attributeName="transform" type="scale" values="0;0.8;0" dur="3s" begin="0.2s" repeatCount="indefinite"/></use></g>
+    <g transform="translate(330,290)"><use href="#spark" fill="#ff6ec7"><animateTransform attributeName="transform" type="scale" values="0;0.8;0" dur="2.1s" begin="1.5s" repeatCount="indefinite"/></use></g>
+  </g>
+
+  <!-- marquee -->
+  <rect y="288" width="900" height="32" fill="#000" opacity="0.6"/>
+  <text y="308" font-family="Courier New, monospace" font-size="11" fill="#9aa0a6" textLength="2400" lengthAdjust="spacing">
+    ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧ CLASSIFY ✧ TRAIN ✧ PREDICT ✧ 2000 ✧
+    <animateTransform attributeName="transform" type="translate" values="0 0;-400 0" dur="10s" repeatCount="indefinite"/>
+  </text>
+</svg>

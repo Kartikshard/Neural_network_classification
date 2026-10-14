@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 48" width="900" height="48" role="img" aria-label="divider">
+  <defs>
+    <linearGradient id="chrome" x1="-1" y1="0" x2="0" y2="0" spreadMethod="reflect">
+      <stop offset="0" stop-color="#4b4b4f"/><stop offset="0.3" stop-color="#fff"/>
+      <stop offset="0.6" stop-color="#8f9399"/><stop offset="1" stop-color="#4b4b4f"/>
+      <animate attributeName="x1" values="-1;1" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+    <path id="spark" d="M0 -12 Q1.5 -1.5 12 0 Q1.5 1.5 0 12 Q-1.5 1.5 -12 0 Q-1.5 -1.5 0 -12Z"/>
+    <g id="cross">
+      <rect x="-6" y="-60" width="12" height="120" rx="2"/>
+      <rect x="-34" y="-28" width="68" height="12" rx="2"/>
+      <circle cx="0" cy="-62" r="8"/><circle cx="0" cy="62" r="8"/>
+      <circle cx="-36" cy="-22" r="8"/><circle cx="36" cy="-22" r="8"/>
+    </g>
+  </defs>
+  <rect x="40" y="23" width="360" height="2" fill="url(#chrome)"/>
+  <rect x="500" y="23" width="360" height="2" fill="url(#chrome)"/>
+  <g transform="translate(450,24) scale(0.3)">
+    <g><animateTransform attributeName="transform" type="scale" values="1 1;0.05 1;1 1" dur="3s" repeatCount="indefinite"/>
+      <use href="#cross" fill="url(#chrome)"/></g>
+  </g>
+  <g fill="#6ef3ff"><g transform="translate(410,24)"><use href="#spark"><animateTransform attributeName="transform" type="scale" values="0;0.6;0" dur="2s" repeatCount="indefinite"/></use></g></g>
+  <g fill="#ff6ec7"><g transform="translate(490,24)"><use href="#spark"><animateTransform attributeName="transform" type="scale" values="0;0.6;0" dur="2s" begin="1s" repeatCount="indefinite"/></use></g></g>
+</svg>

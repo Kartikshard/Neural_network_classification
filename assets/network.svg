@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 340" width="870" height="340" role="img" aria-label="Animated neural network">
+  <defs>
+    <radialGradient id="ball" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.5" stop-color="#9aa0a8"/>
+      <stop offset="1" stop-color="#1a1a1d"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <g id="node">
+      <circle r="15" fill="url(#ball)" stroke="#fff" stroke-opacity="0.6"/>
+      <ellipse cx="-4" cy="-6" rx="5" ry="3" fill="#fff" opacity="0.8"/>
+    </g>
+    <circle id="r0" r="15" fill="none" stroke="#6ef3ff" stroke-width="2"><animate attributeName="r" values="15;32" dur="2.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+    <circle id="r1" r="15" fill="none" stroke="#ff6ec7" stroke-width="2"><animate attributeName="r" values="15;32" dur="2.4s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle id="r2" r="15" fill="none" stroke="#b69cff" stroke-width="2"><animate attributeName="r" values="15;32" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle id="r3" r="15" fill="none" stroke="#6ef3ff" stroke-width="2"><animate attributeName="r" values="15;32" dur="2.4s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="2.4s" begin="1.8s" repeatCount="indefinite"/></circle>
+  </defs>
+
+  <rect width="870" height="340" rx="14" fill="#050505" stroke="#2a2a2e"/>
+
+  <!-- edges with flowing data -->
+  <g fill="none" stroke="#c9ccd1" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="4 8">
+    <path d="M120 80L330 50M120 80L330 120M120 80L330 200M120 80L330 270M120 160L330 50M120 160L330 120M120 160L330 200M120 160L330 270M120 240L330 50M120 240L330 120M120 240L330 200M120 240L330 270">
+      <animate attributeName="stroke-dashoffset" values="0;-36" dur="1.6s" repeatCount="indefinite"/></path>
+    <path d="M330 50L540 50M330 50L540 120M330 50L540 200M330 50L540 270M330 120L540 50M330 120L540 120M330 120L540 200M330 120L540 270M330 200L540 50M330 200L540 120M330 200L540 200M330 200L540 270M330 270L540 50M330 270L540 120M330 270L540 200M330 270L540 270">
+      <animate attributeName="stroke-dashoffset" values="0;-36" dur="2s" repeatCount="indefinite"/></path>
+    <path d="M540 50L750 80M540 50L750 160M540 50L750 240M540 120L750 80M540 120L750 160M540 120L750 240M540 200L750 80M540 200L750 160M540 200L750 240M540 270L750 80M540 270L750 160M540 270L750 240">
+      <animate attributeName="stroke-dashoffset" values="0;-36" dur="1.4s" repeatCount="indefinite"/></path>
+  </g>
+
+  <!-- pulses travelling through the net -->
+  <g filter="url(#glow)">
+    <circle r="4" fill="#fff"><animateMotion dur="3s" repeatCount="indefinite" path="M120 160L330 120L540 200L750 160"/></circle>
+    <circle r="4" fill="#6ef3ff"><animateMotion dur="3.6s" begin="0.8s" repeatCount="indefinite" path="M120 80L330 270L540 120L750 240"/></circle>
+    <circle r="4" fill="#ff6ec7"><animateMotion dur="4s" begin="1.6s" repeatCount="indefinite" path="M120 240L330 50L540 270L750 80"/></circle>
+  </g>
+
+  <!-- rings -->
+  <use href="#r0" x="120" y="80"/><use href="#r0" x="120" y="160"/><use href="#r0" x="120" y="240"/>
+  <use href="#r1" x="330" y="50"/><use href="#r1" x="330" y="120"/><use href="#r1" x="330" y="200"/><use href="#r1" x="330" y="270"/>
+  <use href="#r2" x="540" y="50"/><use href="#r2" x="540" y="120"/><use href="#r2" x="540" y="200"/><use href="#r2" x="540" y="270"/>
+  <use href="#r3" x="750" y="80"/><use href="#r3" x="750" y="160"/><use href="#r3" x="750" y="240"/>
+
+  <!-- nodes -->
+  <use href="#node" x="120" y="80"/><use href="#node" x="120" y="160"/><use href="#node" x="120" y="240"/>
+  <use href="#node" x="330" y="50"/><use href="#node" x="330" y="120"/><use href="#node" x="330" y="200"/><use href="#node" x="330" y="270"/>
+  <use href="#node" x="540" y="50"/><use href="#node" x="540" y="120"/><use href="#node" x="540" y="200"/><use href="#node" x="540" y="270"/>
+  <use href="#node" x="750" y="80"/><use href="#node" x="750" y="160"/><use href="#node" x="750" y="240"/>
+
+  <!-- winning class lights up in turn -->
+  <g filter="url(#glow)">
+    <circle cx="750" cy="80" r="15" fill="#ff6ec7" opacity="0"><animate attributeName="opacity" values="0;0.9;0;0;0" keyTimes="0;0.15;0.33;0.66;1" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="750" cy="160" r="15" fill="#6ef3ff" opacity="0"><animate attributeName="opacity" values="0;0;0.9;0;0" keyTimes="0;0.33;0.5;0.66;1" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="750" cy="240" r="15" fill="#b69cff" opacity="0"><animate attributeName="opacity" values="0;0;0;0.9;0" keyTimes="0;0.66;0.82;0.95;1" dur="6s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- labels -->
+  <g font-family="Courier New, monospace" font-size="12" fill="#9aa0a6" text-anchor="middle" letter-spacing="2">
+    <text x="120" y="318">INPUT</text>
+    <text x="330" y="318">HIDDEN 01</text>
+    <text x="540" y="318">HIDDEN 02</text>
+    <text x="750" y="318">SOFTMAX</text>
+  </g>
+  <g font-family="Courier New, monospace" font-size="11" fill="#c9ccd1">
+    <text x="778" y="84">class 0</text>
+    <text x="778" y="164">class 1</text>
+    <text x="778" y="244">class 2</text>
+  </g>
+</svg>
